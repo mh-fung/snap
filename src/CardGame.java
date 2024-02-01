@@ -22,7 +22,9 @@ public class CardGame {
         return deckOfCards;
     }
     public Card dealCard() {
-        return deckOfCards.get(0);
+        Card takenCard = deckOfCards.get(0);
+        deckOfCards.remove(0);
+        return takenCard;
     }
     public List<Card> sortDeckInNumberOrder() {
         deckOfCards.sort((a, b) -> a.getValue() - b.getValue());
